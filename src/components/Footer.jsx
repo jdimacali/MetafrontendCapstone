@@ -1,12 +1,9 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="flex">
-        <div className="mr-20">
-          <img src="/icons_assets/Logo.svg" alt="logo" className="pr-16" />
-        </div>
-
-        <div className="flex gap-40">
+      <div className="px-6 md:px-0">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <img src="/icons_assets/Logo.svg" alt="logo" className="w-32 h-12" />
           <div>
             <h2 className="text-lg font-semibold">Doormat Navigation</h2>
             <ul>

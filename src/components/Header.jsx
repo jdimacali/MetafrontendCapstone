@@ -1,15 +1,15 @@
 const Header = () => {
   return (
-    <header>
-      <div className="flex justify-between py-6 bg-[#495e57]">
+    <header className="bg-[#495e57] py-12 md:-mx-12 lg:-mx-40 xl:-mx-72 2xl:-mx-80 mb-32">
+      <div className="flex justify-between md:mx-12 lg:mx-40 xl:mx-72 2xl:mx-80 relative">
         <div className=" w-48">
           <div className="mb-2">
             <h1 className="text-yellow-500 text-3xl">Little Lemon</h1>
             <h2 className="text-white text-xl"> Chicago</h2>
           </div>
-          <p className="text-white mb-1">
+          <p className="text-white mb-4">
             {" "}
-            WE are a family owned Mediterranaean restaurant, focused on
+            We are a family owned Mediterranaean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
           <button
@@ -20,11 +20,11 @@ const Header = () => {
             Reserve a table{" "}
           </button>
         </div>
-        <div>
+        <div className="absolute left-[60%]">
           <img
             src="/icons_assets/restauranfood.jpg"
             alt="food"
-            className="w-96 h-96 object-cover rounded-2xl"
+            className=" w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl shadow-xl"
           />
         </div>
       </div>

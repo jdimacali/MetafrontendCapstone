@@ -1,9 +1,9 @@
 const Nav = () => {
   return (
-    <nav className="w-full my-8">
-      <div className="flex w-full items-center">
+    <nav className="w-full py-8">
+      <div className="flex w-full items-center justify-between px-6 md:px-0">
         <img src="/icons_assets/Logo.svg" alt="logo" className="pr-16" />
-        <ul className="flex gap-8 font-semibold ml-auto">
+        <ul className="md:flex md:gap-4 lg:gap-8 font-semibold ml-auto items-center hidden whitespace-nowrap">
           <li>
             <a href="#home">Home</a>
           </li>
@@ -23,6 +23,11 @@ const Nav = () => {
             <a href="login">Login</a>
           </li>
         </ul>
+        <img
+          src="/icons_assets/icon_hamburger.svg"
+          alt="menu"
+          className="md:hidden h-5"
+        />
       </div>
     </nav>
   );

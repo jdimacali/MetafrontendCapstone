@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div className="mx-96">
+    <div className="md:mx-12 lg:mx-40 xl:mx-72 2xl:mx-80">
       <Nav />
       <Header />
       <Main />
