@@ -1,11 +1,15 @@
 const Footer = () => {
   return (
-    <footer>
-      <div className="px-6 md:px-0">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <img src="/icons_assets/Logo.svg" alt="logo" className="w-32 h-12" />
+    <footer className="bg-[#495e57] py-12 pb-20 md:-mx-12 lg:-mx-40 xl:-mx-72 2xl:-mx-96 px-6 md:px-0">
+      <div className="text-white md:mx-12 lg:mx-40 xl:mx-72 2xl:mx-96">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+          <img
+            src="/icons_assets/logo_white.png"
+            alt="logo"
+            className="w-26 h-40 object-contain"
+          />
           <div>
-            <h2 className="text-lg font-semibold">Doormat Navigation</h2>
+            <h2 className="font-semibold mb-4">Doormat Navigation</h2>
             <ul>
               <li>
                 <a href="#home">Home</a>
@@ -29,10 +33,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="text-lg font-semibold">Contact</h2>
+            <h2 className="font-semibold mb-4">Contact</h2>
             <ul>
               <li>
-                <a href="#home">Online</a>
+                <a href="#home">Address</a>
               </li>
               <li>
                 <a href="#home">Phone Number</a>
@@ -43,10 +47,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h2 className="text-lg font-semibold">Social Media Links</h2>
+            <h2 className="font-semibold mb-4">Social Media Links</h2>
             <ul>
               <li>
-                <a href="#home">Online</a>
+                <a href="#home">Address</a>
               </li>
               <li>
                 <a href="#home">Phone Number</a>
