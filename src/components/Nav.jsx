@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
     <nav className="w-full py-8">
@@ -5,22 +7,22 @@ const Nav = () => {
         <img src="/icons_assets/Logo.svg" alt="logo" className="pr-16" />
         <ul className="md:flex md:gap-4 lg:gap-8 font-semibold ml-auto items-center hidden whitespace-nowrap">
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#about">About</a>
+            <Link to="about">About</Link>
           </li>
           <li>
-            <a href="#menu">Menu</a>
+            <Link to="menu">Menu</Link>
           </li>
           <li>
-            <a href="#reservations">Reservations</a>
+            <Link to="reservations">Reservations</Link>
           </li>
           <li>
-            <a href="orderonline">Order online</a>
+            <Link to="orderonline">Order online</Link>
           </li>
           <li>
-            <a href="login">Login</a>
+            <Link to="login">Login</Link>
           </li>
         </ul>
         <img
