@@ -9,8 +9,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
-import BookingPage from "./components/BookingPage.jsx";
-import ConfirmedBooking from "./components/ConfirmedBooking.jsx";
+import BookingPage from "./pages/BookingPage.jsx";
+import ConfirmedBooking from "./pages/ConfirmedBooking.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>

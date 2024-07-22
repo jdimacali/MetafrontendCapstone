@@ -1,5 +1,5 @@
 import { useState, useRef, useReducer, useEffect } from "react";
-import BookingForm from "./BookingForm";
+import BookingForm from "../components/BookingForm";
 import { submitAPI, fetchAPI } from "../api";
 import { useNavigate } from "react-router-dom";
 
