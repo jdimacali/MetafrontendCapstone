@@ -84,7 +84,7 @@ const BookingForm = ({
         <button
           type="submit"
           value="Make Your reservation"
-          className="bg-yellow-300 font-semibold rounded-2xl py-2 px-4 mt-6"
+          className="bg-[#F4C314] font-semibold rounded-2xl py-2 px-4 mt-6"
           aria-label="Submit Reservation"
         >
           Make your reservation

@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body,
+html {
+  font-family: "Karla";
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
+h1 {
+  font-family: "Markazi Text";
+}

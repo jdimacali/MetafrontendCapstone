@@ -67,8 +67,8 @@ const BookingPage = () => {
   };
 
   return (
-    <main className="md:mb-20 px-6 md:px-0 flex flex-col items-center justify-center py-12 md:-mx-12 lg:-mx-40 xl:-mx-72 2xl:-mx-96">
-      <h1 className="text-2xl mb-8">Reserve a Table</h1>
+    <main className="md:mb-20 px-6 md:px-0 flex flex-col items-center justify-center pb8 md:-mx-12 lg:-mx-40 xl:-mx-72 2xl:-mx-96">
+      <h1 className="text-[3rem] mb-4">Reserve a Table</h1>
       <div className="flex flex-col lg:flex-row justify-between items-center gap-x-8">
         <img
           src="/icons_assets/restaurant.jpg"

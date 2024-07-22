@@ -1,13 +1,16 @@
 const About = () => {
   return (
-    <section className="flex lg:flex-row flex-col items-center gap-y-10 justify-between mb-48 mt-20">
+    <section
+      className="flex lg:flex-row flex-col items-center gap-y-10 justify-between mb-48 mt-20"
+      id="about"
+    >
       <div>
-        <h1 className="text-3xl text-[#495e57] font-semibold">
+        <h1 className="text-[3rem] text-[#495e57] font-semibold">
           {" "}
           Little Lemon{" "}
         </h1>
-        <h2 className="text-2xl"> Chicago </h2>
-        <p className="w-80 mt-12 text-sm">
+        <h2 className="text-2xl -mt-4"> Chicago </h2>
+        <p className="w-80 mt-8 text-sm">
           {" "}
           Little Lemon is a charming neighorhood bistor that servese simple offd
           and calssic cocktaisl in a lively but casual environment the restuarnt
