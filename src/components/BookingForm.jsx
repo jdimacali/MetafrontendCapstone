@@ -8,6 +8,7 @@ const BookingForm = ({
   availableTimes,
   guestsRef,
   occasionRef,
+  onDateChange,
 }) => {
   return (
     <div className="p-16 rounded-s-md">
@@ -20,6 +21,7 @@ const BookingForm = ({
             ref={dateRef}
             defaultValue={data.date}
             className="h-10 rounded-md px-2 border-gray-500 bg-yellow-100/20 border"
+            onChange={onDateChange} // Call handleDateChange when date changes
           />
         </div>
         <div className="flex flex-col gap-1">

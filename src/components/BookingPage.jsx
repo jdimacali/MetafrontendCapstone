@@ -1,21 +1,27 @@
-import { useState, useRef, useReducer } from "react";
+import { useState, useRef, useReducer, useEffect } from "react";
 import BookingForm from "./BookingForm";
-
-const initializeTimes = () => {
-  return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"];
-};
-
-const updateTimes = (state, action) => {
-  switch (action.type) {
-    case "UPDATE":
-      // For now, return the same times regardless of the date
-      return initializeTimes();
-    default:
-      return state;
-  }
-};
+import { submitAPI, fetchAPI } from "../api";
+import { useNavigate } from "react-router-dom";
 
 const BookingPage = () => {
+  const [date, setDate] = useState(new Date());
+  const navigate = useNavigate();
+
+  const initializeTimes = (date) => fetchAPI(date);
+
+  const updateTimes = (date) => fetchAPI(new Date(date));
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "UPDATE":
+        return updateTimes(action.date);
+      case "INITIALIZE":
+        return initializeTimes(action.date);
+      default:
+        return state;
+    }
+  };
+
   const [data, setData] = useState({
     date: "",
     time: "",
@@ -28,11 +34,13 @@ const BookingPage = () => {
   const guestsRef = useRef();
   const occasionRef = useRef();
 
-  const [availableTimes, dispatch] = useReducer(
-    updateTimes,
-    [],
-    initializeTimes
+  const [availableTimes, dispatch] = useReducer(reducer, [], () =>
+    initializeTimes(date)
   );
+
+  useEffect(() => {
+    dispatch({ type: "INITIALIZE", date });
+  }, [date]);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -43,16 +51,24 @@ const BookingPage = () => {
       occasion: occasionRef.current.value,
     };
     setData(newData);
-    alert(JSON.stringify(newData, null, 2));
+    try {
+      if (submitAPI(newData)) {
+        navigate("/confirmation");
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again later.");
+    }
   };
 
   const handleDateChange = () => {
-    dispatch({ type: "UPDATE", date: dateRef.current.value });
+    const newDate = new Date(dateRef.current.value);
+    setDate(newDate);
+    dispatch({ type: "UPDATE", date: newDate });
   };
 
   return (
     <main className="md:mb-20 px-6 md:px-0 flex flex-col items-center justify-center py-12 md:-mx-12 lg:-mx-40 xl:-mx-72 2xl:-mx-96">
-      <h1 className="text-2xl mb-8 ">Reserve a Table </h1>
+      <h1 className="text-2xl mb-8">Reserve a Table</h1>
       <div className="flex flex-col lg:flex-row justify-between items-center gap-x-8">
         <img
           src="/icons_assets/restaurant.jpg"

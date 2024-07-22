@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import BookingPage from "./components/BookingPage.jsx";
+import ConfirmedBooking from "./components/ConfirmedBooking.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path="/reservations" element={<BookingPage />} />
       <Route path="/orderonline" element={<BookingPage />} />
       <Route path="/login" element={<BookingPage />} />
+      <Route path="/confirmation" element={<ConfirmedBooking />} />
     </Route>
   )
 );
