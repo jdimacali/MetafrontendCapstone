@@ -9,11 +9,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
-
+import BookingPage from "./components/BookingPage.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<App />} />
+      <Route path="/about" element={<BookingPage />} />
+      <Route path="/menu" element={<BookingPage />} />
+      <Route path="/reservations" element={<BookingPage />} />
+      <Route path="/orderonline" element={<BookingPage />} />
+      <Route path="/login" element={<BookingPage />} />
     </Route>
   )
 );
