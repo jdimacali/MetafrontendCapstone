@@ -22,6 +22,8 @@ const BookingForm = ({
             defaultValue={data.date}
             className="h-10 rounded-md px-2 border-gray-500 bg-yellow-100/20 border"
             onChange={onDateChange} // Call handleDateChange when date changes
+            required
+            aria-label="Reservation Date"
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -31,7 +33,12 @@ const BookingForm = ({
             ref={timeRef}
             defaultValue={data.time}
             className="h-10 rounded-md px-2 border-gray-500 bg-yellow-100/20 border"
+            required
+            aria-label="Reservation Time"
           >
+            <option value="" disabled>
+              Select a time
+            </option>
             {availableTimes.map((time) => (
               <option key={time} value={time}>
                 {time}
@@ -50,6 +57,8 @@ const BookingForm = ({
             ref={guestsRef}
             defaultValue={data.guests}
             className="h-10 rounded-md px-2 border-gray-500 bg-yellow-100/20 border"
+            required
+            aria-label="Number of Guests"
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -59,7 +68,12 @@ const BookingForm = ({
             ref={occasionRef}
             defaultValue={data.occasion}
             className="h-10 rounded-md px-2 border-gray-500 bg-yellow-100/20 border"
+            required
+            aria-label="Reservation Occasion"
           >
+            <option value="" disabled>
+              Select an occasion
+            </option>
             <option value="Birthday">Birthday</option>
             <option value="Anniversary">Anniversary</option>
             <option value="Business meeting">Business meeting</option>
@@ -71,6 +85,7 @@ const BookingForm = ({
           type="submit"
           value="Make Your reservation"
           className="bg-yellow-300 font-semibold rounded-2xl py-2 px-4 mt-6"
+          aria-label="Submit Reservation"
         >
           Make your reservation
         </button>
@@ -78,4 +93,5 @@ const BookingForm = ({
     </div>
   );
 };
+
 export default BookingForm;
